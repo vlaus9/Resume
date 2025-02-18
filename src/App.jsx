@@ -138,3 +138,14 @@ const CardsThree = ({isHovered, isload}) => {
         </div>
         )
       }
+
+const CardsBlur = ({isActiveBlurCards}) => {
+  return (
+
+          <motion.div 
+          // animate={ПРОПИСАТЬ ВАРИАНТЫ БЛЮРА ЧТОБЫ БЫЛА ПЛАВНАЯ АНИМАЦИЯ}
+          className={isActiveBlurCards ? 'absolute w-[100vw] h-[100vh] translate-y-[-60%] backdrop-blur-xs bg-black/30 z-[0]' : 'none'}>
+          </motion.div>
+
+  )
+}
