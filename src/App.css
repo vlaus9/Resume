@@ -15,9 +15,10 @@
 
 .body {
   width:100%;
-  height: 100vh;
+  min-height:100vh;
   background: url('./assets/Фон_Монтажная область 1.jpg');
   background-size: cover;
+  /* background-repeat: repeat; */
   /* background: radial-gradient(#439d98 20%, #3AAFa9 60%) */
 }
 
