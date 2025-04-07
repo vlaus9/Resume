@@ -111,6 +111,28 @@ font-weight: normal;
   color:#3a414f;
   z-index:3;
 }
-/* 
-'absolute left-[50%] top-[50%] translate-x-[-50%] translate-y-[-50%] w-[150px] h-[50px] text-center content-center font-[Revard] text-[#3a414f] z-[3]' */
 
+
+.info-cards {
+  position:absolute; 
+  display:flex;
+  flex-direction:column;
+  gap:20px;
+  width:100%;
+  height:100%;
+  padding:10% 10%;
+  font-size:clamp(1vh, 2vw + 2vh, 2.1vh);
+  hyphens:auto;
+  overflow:auto;
+}
+
+.list-two-card {
+  position:relative;
+  display:flex;
+  flex-direction:column;
+  gap:20px;
+  list-style-type:disc;
+  left: 5.4%;
+}
+/* 
+absolute left-[5.4%] top-[10%] w-[90%] flex flex-col gap-[20px] list-disc */

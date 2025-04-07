@@ -182,7 +182,7 @@ const stylesCards = {
   cardsParentClick() {
     if(window.innerWidth < 470 || window.innerHeight < 730) {
       return 'w-[95vw] h-[90vh] flex flex-[1 0 33%] flex-wrap justify-center items-center'
-    } else {return 'min-w-[450px] h-[90vh]  flex flex-[1 0 33%] flex-wrap justify-center items-center'}
+    } else {return 'min-w-[450px] w-[30vw] h-[90vh]  flex flex-[1 0 33%] flex-wrap justify-center items-center'}
   } ,
 
 
@@ -201,13 +201,8 @@ const stylesCards = {
   cardsClickThree: 'relative w-[95%] h-[95%] rounded-[15px] border-[#1d2f35] border-[0.3px] bg-white hover:bg-sky-700 opacity-[0.9] rotate-345',
 
 
-  cardsCloseBut: 'fixed scale-[1.6] right-[35px] z-1 top-[25px] text-[#17252A] hover:scale-[2] hover:text-[#385059] transition-all',
+  cardsCloseBut: 'fixed min-w-[40px] scale-[1.6] right-[35px] z-1 top-[25px] text-[#17252A] hover:scale-[2] hover:text-[#385059] transition-all'
 
-  textInfo() {
-    if(window.innerHeight < 710 && window.innerWidth < 500) {
-      return 'absolute flex flex-col gap-[20px] w-[80%] h-[80%] left-[10%] top-[10%] font-[Revard] text-[15px] hyphens-auto'
-    } else {return 'absolute flex flex-col gap-[20px] w-[80%] h-[80%] left-[10%] top-[10%] font-[Revard] text-[20px] 2xl:text-[25px] hyphens-auto'}
-  }
 }
 
 const variantName = {
@@ -296,7 +291,7 @@ const CardsBlur = ({isActiveBlurCards, isClickCards}) => {
 
 const TextInfoOne = () => {
     return (
-      <section className={stylesCards.textInfo()} lang='RU'>
+      <section className='info-cards' lang='RU'>
         <p><b>Дата рождения: </b>{myInfo.age}</p>
         <p><b>Место проживания: </b>{myInfo.location}</p>
         <p><b>Образование: </b>{myInfo.education}</p>
@@ -309,9 +304,9 @@ const TextInfoOne = () => {
 
 const TextInfoTwo = () => {
   return (
-    <section className={stylesCards.textInfo()}>
+    <section className='info-cards'>
       <p><b>Стек:</b></p>
-        <ul className='absolute left-[5.4%] top-[10%] w-[90%] flex flex-col gap-[20px] list-disc'>
+        <ul className='list-two-card'>
           <li>HTML</li>
           <li>CSS</li>
           <li>JavaScript</li>
@@ -328,7 +323,7 @@ const TextInfoTwo = () => {
 
 const TextInfoThree = () => {
   return (
-    <section className={stylesCards.textInfo()} lang='RU'>
+    <section className='info-cards' lang='RU'>
       <p>Геодезист по образованию, архитектор-градостроитель по крайнему месту работы, фронденд разработчик сейчас и в будущем.<br /> Креативный, жизнерадостный, позитивный, дружелюбный, усердный, иногда слишком дотошный, творческий.<br /> Полон желания учиться, перенимать опыт, познавать новое, создавать.</p>
       <ul className='flex flex-col gap-[10px]'>
         <li><FontAwesomeIcon icon={faPhone} />&nbsp;&nbsp;&nbsp;8 (916)-848-31-61</li>
